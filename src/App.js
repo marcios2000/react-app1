@@ -13,15 +13,21 @@ class App extends Component {
     
    }
    next = () => {
-     this.setState(({ count }) => ({
+    if(this.state.count <24){
+   this.setState(({ count }) => ({
        count: count + 1
      }));
+    }
+     
    };
 
    previous = () => {
+    if(this.state.count > 0){
      this.setState(({ count }) => ({
        count: count - 1
-     }));
+     }));  
+   }
+     
    };
 
  render() {
